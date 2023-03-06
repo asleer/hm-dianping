@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author 虎哥
+ * @author asleer
  * @since 2021-12-22
  */
 public interface IShopService extends IService<Shop> {
@@ -19,4 +19,7 @@ public interface IShopService extends IService<Shop> {
 
     // 更新商铺信息
     Result update(Shop shop);
+
+    // 根据商铺类型分页查询商铺信息
+    Result queryShopByType(Integer typeId, Integer current, Double x, Double y);
 }
